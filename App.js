@@ -1,32 +1,13 @@
-import React, { useState } from 'react';
-import { View, Text, TextInput, Button, StyleSheet } from 'react-native';
+import React from 'react';
+import { View, Text, Button, StyleSheet } from 'react-native';
 
-export default function RegisterScreen({ navigation }) {
-  const [username, setUsername] = useState('');
-  const [password, setPassword] = useState('');
-
-  const handleRegister = () => {
-    // Логика регистрации
-    navigation.navigate('Login');
-  };
-
+export default function HomeScreen({ navigation }) {
   return (
     <View style={styles.container}>
-      <Text style={styles.title}>Register</Text>
-      <TextInput
-        style={styles.input}
-        placeholder="Username"
-        value={username}
-        onChangeText={setUsername}
-      />
-      <TextInput
-        style={styles.input}
-        placeholder="Password"
-        value={password}
-        onChangeText={setPassword}
-        secureTextEntry
-      />
-      <Button title="Register" onPress={handleRegister} />
+      <Text style={styles.title}>Home</Text>
+      <Button title="Add Transaction" onPress={() => navigation.navigate('AddTransaction')} />
+      <Button title="Reports" onPress={() => navigation.navigate('Reports')} />
+      <Button title="Settings" onPress={() => navigation.navigate('Settings')} />
     </View>
   );
 }
@@ -42,12 +23,5 @@ const styles = StyleSheet.create({
     fontWeight: 'bold',
     textAlign: 'center',
     marginBottom: 16,
-  },
-  input: {
-    borderWidth: 1,
-    borderColor: '#ccc',
-    padding: 8,
-    marginBottom: 16,
-    borderRadius: 4,
   },
 });
