@@ -1,27 +1,23 @@
-import React from 'react';
-import { View, Text, Button, StyleSheet } from 'react-native';
-
-export default function HomeScreen({ navigation }) {
-  return (
-    <View style={styles.container}>
-      <Text style={styles.title}>Home</Text>
-      <Button title="Add Transaction" onPress={() => navigation.navigate('AddTransaction')} />
-      <Button title="Reports" onPress={() => navigation.navigate('Reports')} />
-      <Button title="Settings" onPress={() => navigation.navigate('Settings')} />
-    </View>
-  );
+{
+  "login": "Login",
+  "register": "Register",
+  "username": "Username",
+  "password": "Password",
+  "home": "Home",
+  "addTransaction": "Add Transaction",
+  "reports": "Reports",
+  "settings": "Settings",
+  "welcome": "Welcome"
 }
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    padding: 16,
-    justifyContent: 'center',
-  },
-  title: {
-    fontSize: 24,
-    fontWeight: 'bold',
-    textAlign: 'center',
-    marginBottom: 16,
-  },
-});
+{
+  "login": "Войти",
+  "register": "Регистрация",
+  "username": "Имя пользователя",
+  "password": "Пароль",
+  "home": "Главная",
+  "addTransaction": "Добавить транзакцию",
+  "reports": "Отчёты",
+  "settings": "Настройки",
+  "welcome": "Добро пожаловать"
+}
