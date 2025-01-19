@@ -1,18 +1,18 @@
 import React, { useState } from 'react';
 import { View, Text, TextInput, Button, StyleSheet } from 'react-native';
 
-export default function LoginScreen({ navigation }) {
+export default function RegisterScreen({ navigation }) {
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
 
-  const handleLogin = () => {
-    // Проверка логина
-    navigation.navigate('Home');
+  const handleRegister = () => {
+    // Логика регистрации
+    navigation.navigate('Login');
   };
 
   return (
     <View style={styles.container}>
-      <Text style={styles.title}>Login</Text>
+      <Text style={styles.title}>Register</Text>
       <TextInput
         style={styles.input}
         placeholder="Username"
@@ -26,8 +26,7 @@ export default function LoginScreen({ navigation }) {
         onChangeText={setPassword}
         secureTextEntry
       />
-      <Button title="Login" onPress={handleLogin} />
-      <Button title="Register" onPress={() => navigation.navigate('Register')} />
+      <Button title="Register" onPress={handleRegister} />
     </View>
   );
 }
